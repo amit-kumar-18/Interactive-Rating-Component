@@ -1,6 +1,7 @@
-const container = document.querySelector('.container')
+const frontPage = document.querySelector('.front-page')
 const btn = document.getElementById('btn')
 const rate = document.querySelectorAll('.rate')
+const thankYou = document.querySelector('.thank-you')
 
 let ratingValue = ''
 
@@ -14,22 +15,19 @@ rate.forEach((rating) => {
 
 btn.addEventListener('click', () => {
   if (ratingValue !== '') {
-    container.innerHTML = `
-    <div class="thank-you">
-    <div class="img">
-      <img src="/images/illustration-thank-you.svg" alt="img" />
-    </div>
-    <div class="status">
-      <small> You selected ${ratingValue} out of 5</small>
-    </div>
-    <div class="thank-you-message">
-      <h1>Thank you!</h1>
-      <p>
-        We appreciate you taking the time to give a rating. If you ever need
-        more support, don’t hesitate to get in touch!
-      </p>
-    </div>
-  </div>
+    frontPage.style.display = 'none'
+    thankYou.classList.add('active')
+    thankYou.innerHTML += `
+      <div class="status">
+          <small> You selected ${ratingValue} out of 5</small>
+        </div>
+        <div class="thank-you-message">
+          <h1>Thank you!</h1>
+          <p>
+            We appreciate you taking the time to give a rating. If you ever need
+            more support, don’t hesitate to get in touch!
+          </p>
+        </div>
     `
   }
 })

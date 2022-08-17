@@ -73,6 +73,8 @@ body {
   border-radius: 50%;
   color: hsl(216, 12%, 54%);
   cursor: pointer;
+  border: transparent;
+  outline: transparent;
 }
 
 .ratings .rating .rate:hover {
@@ -101,6 +103,7 @@ body {
   letter-spacing: 2px;
   font-weight: 700;
   cursor: pointer;
+  border: 1px solid transparent;
 }
 
 .container .btn:focus {
@@ -117,11 +120,15 @@ body {
 }
 
 .thank-you {
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
+}
+
+.thank-you.active {
+  display: flex;
 }
 
 .thank-you .img {
