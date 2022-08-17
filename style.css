@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: hsl(216, 12%, 8%);
+  color: hsl(0, 0%, 100%);
+  font-family: 'Overpass', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  width: 400px;
+  height: 450px;
+  background-color: hsl(215, 25%, 13%);
+  padding: 30px;
+  border-radius: 50px;
+}
+
+.container .star-container {
+  background-color: #252d37;
+  width: min-content;
+  padding: 15px 18px;
+  border-radius: 50%;
+  margin-bottom: 30px;
+}
+
+.container .star-container img {
+  transition: transform 0.8s ease-in-out;
+}
+
+.container .star-container img:hover {
+  transform: rotate(360deg) scale(1.5);
+}
+
+.container .text-container {
+  margin: 20px 0;
+}
+
+.container .text-container h1 {
+  margin-bottom: 20px;
+}
+
+.container .text-container p {
+  color: hsl(216, 12%, 54%);
+  line-height: 1.5;
+}
+
+.ratings {
+  margin: 20px 0;
+}
+
+.ratings .rating {
+  display: flex;
+  justify-content: space-between;
+}
+
+.ratings .rating .rate {
+  list-style-type: none;
+  background-color: #252d37;
+  padding: 20px 25px;
+  border-radius: 50%;
+  color: hsl(216, 12%, 54%);
+  cursor: pointer;
+}
+
+.ratings .rating .rate:hover {
+  background-color: hsl(216, 12%, 54%);
+  color: hsl(0, 0%, 100%);
+}
+
+.ratings .rating .rate.active {
+  background-color: hsl(25, 97%, 53%);
+  color: hsl(0, 0%, 100%);
+}
+
+.container .btn {
+  width: 100%;
+  margin: 20px 0;
+  border-radius: 50px;
+  background-color: hsl(25, 97%, 53%);
+  text-transform: uppercase;
+  padding: 15px;
+  color: hsl(0, 0%, 100%);
+  letter-spacing: 2px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.container .btn:focus {
+  outline: none;
+}
+
+.container .btn:hover {
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(25, 97%, 53%);
+}
+
+.container .btn:active {
+  transform: scale(0.98);
+}
+
+.thank-you {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.thank-you .img {
+  padding: 20px;
+}
+
+.thank-you .status {
+  background-color: #252d37;
+  padding: 10px;
+  margin: 20px 0;
+  border-radius: 50px;
+  width: 200px;
+  color: hsl(25, 97%, 53%);
+}
+
+.thank-you .thank-you-message h1 {
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.thank-you .thank-you-message p {
+  color: hsl(216, 12%, 54%);
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+.attribution {
+  position: absolute;
+  bottom: 10px;
+  color: hsl(216, 12%, 54%);
+}
+
+.attribution a {
+  text-decoration: none;
+  color: hsl(0, 0%, 100%);
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 350px;
+    height: 420px;
+  }
+
+  .container .star-container {
+    margin: 0;
+  }
+
+  .ratings .rating .rate {
+    padding: 15px 20px;
+  }
+
+  .container .btn {
+    margin: 0;
+  }
+}
