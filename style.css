@@ -85,11 +85,13 @@ body {
 .ratings .rating .rate.active {
   background-color: hsl(25, 97%, 53%);
   color: hsl(0, 0%, 100%);
-  outline: none;
+  border: transparent;
+  outline: transparent;
 }
 
 .ratings .rating .rate:active {
-  outline: none;
+  border: transparent;
+  outline: transparent;
 }
 
 .container .btn {
