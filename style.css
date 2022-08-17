@@ -86,7 +86,7 @@ body {
   outline: none;
 }
 
-.ratings .rating .rate:focus {
+.ratings .rating .rate:active {
   outline: none;
 }
 
